@@ -4,15 +4,26 @@ These windows commands should help out with live triaging a system. It's specifi
 
 ## System Information commands
 
-    echo %DATE% %TIME%
 
-    hostname
+Echo's date and time
+        
+        echo %DATE% %TIME%
 
-    systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+Displays hostname
 
-    wmic csproduct get name
+        hostname
 
-    wmic bios get serialnumber
+Displays system information and pipes into find strings related to OS name and OS Version
+
+        systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+
+Retrieves csproduct
+
+        wmic csproduct get name
+
+Gets BIOS serialnumber
+
+        wmic bios get serialnumber
 
     wmic computersystem list brief
 
